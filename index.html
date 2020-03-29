@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+    <title>Therabreath — Homepage</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="hidden">Therabreath — Your Kind of Beer</h1>
+      <header>
+        <div class="container"><!--Start Container-->
+          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+           <source src="images/background_video.mp4" type="video/mp4">
+          </video>
+          <nav class="mainNav">
+            <h2 class="hidden">Main Navigation</h2>
+            <a href="#"><img src="images/logo_sf.svg" alt="Logo Scaffold" id="logo"></a>
+            <button id="menuButton"></button>
+            <div id="burgerCon"><!--Start Burger Menu-->
+              <ul id="burgerMenu">
+                <li><a href="about.html">OUR STORY</a></li>
+                <li><a href="beers.html">OUR BEERS</a></li>
+                <li><a href="explore.html">EXPLORE</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+              </ul>
+            </div><!--End Burger Menu-->
+          </nav>
+          <div id="buttonCon"><button class="buttonHero" onclick=location.href="explore.html">CHECK US OUT</button></div>
+        </div><!--End Container-->
+      </header>
+      <div class="container"><!--Start Container-->
+        <section id="promoIndex"><!--Start Promoting Area-->
+          <h2 class="hidden">Promoting Area</h2>
+            <div class="box">
+              <picture>
+                <source srcset="images/beer_sf.jpg" media="(min-width:601px)">
+                <img src="images/beer_sf_mobile.jpg" alt="Beer IMG">
+              </picture>
+            </div>
+            <div class="box" id="why">
+              <h2>WHY THERABREATH?</h2>
+              <p>We guarantee to deliver the finest beers you have ever tasted.
+                Come and take a look at different flavours that you can try for yourself,
+                let us "Therabreath" away!</p>
+              <a class="learnMore" href="beers.html">LEARN MORE</a>
+            </div>
+            <div class="box">
+              <picture>
+                <source srcset="images/beer_sf.jpg" media="(min-width:601px)">
+                <img src="images/beer_sf_mobile.jpg" alt="Beer IMG">
+              </picture>
+            </div>
+            <div class="box" id="how">
+              <h2>HOW DID IT BEGIN?</h2>
+              <p>Here tells the story of Therabreath, a unique beer that focuses on oral health,
+                 and how we turned the most enjoyable beverage into something
+                 healthy and unique!</p>
+              <a class="learnMore" href="about.html">LEARN MORE</a>
+            </div>
+        </section><!--End Promoting Area-->
+      </div><!--End Container-->
+      <div class="container"><!--Start Container-->
+        <footer>
+          <div id="footerBackground">
+            <div class="box">
+              <h2>JOIN OUR NEWSLETTER</h2>
+              <form action="newsletter.php" id="newsLetter" method="get">
+                <div id="inputCon">
+                  <input type="email" placeholder="EMAIL ADDRESS">
+                  <button id="buttonSub">SUBSCRIBE</button>
+                </div>
+              </form>
+            </div>
+            <div class="box">
+              <section id="socialMedia">
+                <h2 class="hidden">Social Media</h2>
+                <a href="https://www.facebook.com/" class="socialText">FACEBOOK</a>
+                <a href="https://www.instagram.com/" class="socialText">INSTAGRAM</a>
+                <a href="https://www.twitter.com/" class="socialText">TWITTER</a>
+              </section>
+            </div>
+          </div>
+          <div class="box" id="footerContent">
+            <div id="logoFooterBox">
+              <a href="#"><img src="images/logo_sf.svg" alt="Logo Scaffold" id="logoFooter"></a>
+              <p>THERABREATH IS YOUR KIND OF BEER</p>
+            </div>
+            <div id="copyText">
+              <p>INFORMATION AT: info@therabreath.com</p>
+              <p>2020 © ALL RIGHTS RESERVED | Site by Evan&Jihee</p>
+            </div>
+          </div>
+        </footer>
+      </div><!--End Container-->
+    </main>
+  <script src="js/main.js"></script>
+  </body>
+</html>

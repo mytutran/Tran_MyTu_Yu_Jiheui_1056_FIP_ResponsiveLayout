@@ -1,0 +1,411 @@
+/*CSS Variables*/
+:root {
+  --blue: #13294B;
+  --red: #C8102E;
+  --silver: #B1B3B3;
+  --white: #fff;
+  --black: #000;
+}
+
+/*Utility Class*/
+.boxHelper {
+	color: #fff;
+	background-color: #000;
+	text-align: center;
+}
+
+.hidden
+{
+	display: none;
+}
+
+/* General rules - scales images, videos to size of container */
+img, embed, object, video {
+  max-width: 100%; }
+
+
+/*Switch Box Model*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/*Fix for Scaling of Images IE*/
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/*General Rules for Elements*/
+
+body
+{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+h2
+{
+	font-family: 'Bebas Neue', 'Impact', cursive;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'Bebas Neue', 'Impact', cursive;
+  font-size: 30px;
+}
+
+p {
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/* Header Area */
+header .container {
+  height: 75vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  padding: 15px 15px 50px 15px;
+}
+
+header video {
+  position: absolute;
+  object-fit: cover;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-filter: brightness(0.5);
+}
+
+#logo {
+  max-width: 130px;
+}
+
+#burgerCon {
+  display: none;
+}
+
+#burgerCon.slideToggle {
+	display: block;
+}
+
+#menuButton {
+  background: url(../images/burger_menu.svg) center no-repeat;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+#menuButton.expanded {
+  width: 40px;
+  height: 40px;
+  background: url(../images/burger_expanded.svg) center no-repeat;
+  -webkit-opacity: 0.5;
+  border: none;
+}
+
+.mainNav {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 0fr;
+}
+
+.mainNav li a {
+  display: block;
+	color: var(--white);
+	padding-top: 10px;
+  padding-bottom: 10px;
+	text-align: right;
+  font-size: 1.25em;
+  font-weight: 500;
+  transition-duration: 0.6s;
+}
+
+.mainNav li a:hover {
+  -webkit-filter: opacity(0.6);
+  border-bottom: 1px solid #efefef;
+}
+
+/* Footer Area*/
+#footerBackground {
+  background: url(../images/footer_background.jpg);
+}
+
+footer h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--white);
+}
+
+#socialMedia {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.socialText {
+  font-family: 'Bebas Neue', 'Impact', cursive;
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  font-size: 60px;
+  text-align: left;
+  transition-duration: 0.8s;
+  letter-spacing: 8px;
+}
+
+.socialText:hover {
+  color: var(--white);
+}
+
+#logoFooter {
+  max-width: 100px;
+}
+
+#footerContent{
+  padding: 20px;
+}
+
+#logoFooterBox {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  text-align: left;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+#copyText {
+  line-height: 30px;
+  text-align: left;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+/*------------On Index Page------------*/
+/* Header */
+#buttonCon {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.buttonHero {
+  width: 250px;
+  padding: 10px;
+  height: 50px;
+}
+
+/* Promo Area*/
+#promoIndex {
+  background: url(../images/promo_background.jpg) fixed;
+}
+
+#promoIndex p {
+  padding: 30px;
+}
+
+.learnMore {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+/*------------Media Queries------------*/
+
+
+@media screen and (min-width: 501px) {
+
+  p {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 60px;
+  }
+
+
+  #logo {
+    max-width: 170px;
+  }
+
+  #menuButton {
+    max-width: 70px;
+  }
+
+  #logoFooter {
+    max-width: 120px;
+  }
+
+/* ON INDEX*/
+  #promoIndex {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+
+  p {
+    font-size: 1.09em;
+  }
+
+  #footerContent {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  #logoFooterBox {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  #logoFooterBox p {
+    max-width: 200px;
+  }
+
+  #copyText {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  #logo {
+    max-width: 230px;
+  }
+
+  #menuButton {
+    display: none;
+  }
+
+  #burgerCon {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding-top: 50px;
+  }
+
+  .mainNav {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .mainNav li {
+    display: inline;
+  }
+
+  .mainNav li a {
+    display: inline;
+    text-align: right;
+    margin-right: 50px;
+    font-size: 1.3em;
+  }
+
+  #logoFooter {
+    max-width: 180px;
+  }
+
+  #footerBackground {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    padding: 100px;
+  }
+
+  #footerContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  #logoFooterBox {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 0.5fr;
+  }
+
+  #copyText {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 0fr 1fr;
+    font-size: 0.9em;
+  }
+
+  /* ON INDEX*/
+  .buttonHero {
+    width: 300px;
+    padding: 20px;
+  }
+
+  #promoIndex {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  #promoIndex p {
+    padding: 15px 0px 15px 0px;
+    max-width: 400px;
+  }
+
+  #why {
+    order: -1;
+  }
+
+  #why.box{
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  #how.box{
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #promoIndex a.learnMore{
+    padding: 0;
+  }
+
+}
